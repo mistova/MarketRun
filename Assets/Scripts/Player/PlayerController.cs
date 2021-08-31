@@ -40,6 +40,10 @@ public class PlayerController : MonoBehaviour
 
         if (RemoveMoney(amount))
             return true;
+
+        currentMoney = 0;
+        UIController.instance.SetSliderValue(0);
+
         return false;
     }
 }

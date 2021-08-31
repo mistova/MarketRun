@@ -14,6 +14,6 @@ public class Finish : MonoBehaviour
     {
         gameObject.GetComponent<Movement>().Finished();
 
-        UIController.instance.FinishGame();
+        UIController.instance.FinishGame(true);
     }
 }

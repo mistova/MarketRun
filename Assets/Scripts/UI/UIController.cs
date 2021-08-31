@@ -8,7 +8,7 @@ public class UIController : MonoBehaviour
 
     [SerializeField] Slider moneySlider;
 
-    [SerializeField] GameObject startMenu, gameplayMenu, finishMenu;
+    [SerializeField] GameObject startMenu, gameplayMenu, winMenu, loseMenu;
 
     private void Start()
     {
@@ -29,9 +29,13 @@ public class UIController : MonoBehaviour
         gameplayMenu.SetActive(true);
     }
 
-    internal void FinishGame()
+    internal void FinishGame(bool isWinned)
     {
         gameplayMenu.SetActive(false);
-        finishMenu.SetActive(true);
+
+        if (isWinned)
+            winMenu.SetActive(true);
+        else
+            loseMenu.SetActive(true);
     }
 }
