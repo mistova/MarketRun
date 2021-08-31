@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectible
   - Cart
+  - Obstacle
   layers:
   - Default
   - TransparentFX
